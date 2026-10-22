@@ -1,0 +1,11 @@
+<h1>Lista de productos</h1>
+<p>{{producto.nombre}}</p>
+<p>{{producto.precio}}</p>
+<img src={{producto.imagen}} alt="" style="height: 150px; width: 150px;">
+
+@for (prod of listaProductos; track prod) {
+    <p>{{prod.nombre}}</p>
+    <p>{{prod.precio}}</p>
+    <img src={{prod.imagen}}
+        style="height: 150px; width: 150px;">
+}
