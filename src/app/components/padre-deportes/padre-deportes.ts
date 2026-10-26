@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
   templateUrl: './padre-deportes.html',
 })
 export class PadreDeportes {
-  public deportes: Array<String>;
+  public deportes: Array<string>;
+  public mensaje!: string;
 
   constructor() {
     this.deportes = [
@@ -16,5 +17,11 @@ export class PadreDeportes {
       "football",
       "basketball"
     ]
+  }
+
+  //METODO PARA ENVIAR AL HIJO
+  seleccionarFavoritoPadre(event: string): void {
+    console.log("Leyendo padre");
+    this.mensaje = "Su deporte favorito es: " + event
   }
 }
