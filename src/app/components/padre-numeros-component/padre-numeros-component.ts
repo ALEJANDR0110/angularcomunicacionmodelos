@@ -24,12 +24,12 @@ export class PadreNumerosComponent {
   }
 
   generarNumero(): void {
-    let aleatorio = Math.floor(Math.random() * 200) + 1;
-    this.numeros.push(aleatorio)
+    let aleat = Math.floor(Math.random() * 200) + 1;
+    this.numeros.push(aleat)
     console.log(this.numeros)
   }
 
-  sumarNumero(event: number): void {
-    this.total += event;
+  sumarNumero(numeroRecibido: number): void {
+    this.total += numeroRecibido;
   }
 }
